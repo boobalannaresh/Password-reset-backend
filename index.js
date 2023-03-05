@@ -10,9 +10,9 @@ const port = 4000;
 
 
 
-// app.get("/", function(req, res){
-//     res.status(201).json("server created")
-// })
+app.get("/", function(req, res){
+    res.status(201).json("Welcome to Password Reset Authentication App")
+})
 
 app.use(express.json());
 app.use(cookieParser());
