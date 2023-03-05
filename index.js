@@ -16,10 +16,7 @@ const port = 4000;
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-    origin: "https://tranquil-fairy-da0e18.netlify.app",
-    credentials: true
-}));
+app.use(cors());
 app.use(router);
 
 
