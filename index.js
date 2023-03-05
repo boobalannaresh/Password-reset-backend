@@ -10,16 +10,18 @@ const port = 4000;
 
 
 
-app.get("/", function(req, res){
+app.get("/", function (req, res) {
     res.status(201).json("Welcome to Password Reset Authentication App")
 })
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+    origin: "*"
+}));
 app.use(router);
 
 
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`server start at port no : ${port}`);
 })
