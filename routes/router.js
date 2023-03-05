@@ -179,7 +179,7 @@ router.post("/sendpasswordlink", async (req, res) => {
                 from: "nodemaileraccess@gmail.com",
                 to: email,
                 subject: "Send Email for Password Reset",
-                text: `This Link Valid 5 minutes http://localhost:3000/forgotpassword/${userfind.id}/${setusertoken.verifytoken}`
+                text: `This Link Valid 5 minutes https://tranquil-fairy-da0e18.netlify.app/forgotpassword/${userfind.id}/${setusertoken.verifytoken}`
             }
 
             transporter.sendMail(mailOptions, (error, info) => {
